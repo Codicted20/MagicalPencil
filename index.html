@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magical Sketchbook</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+   
+
+    <div class="container">
+      <h1 class="typing">Draw Your Imagination</h1>
+      <img  src="open.png" alt="Open Sketchbook" width="200px" style="cursor: pointer;"   class="zoom-effect" id="openBtn">
+    </div>
+
+    <div class="drawing-area" id="drawingArea" >
+      <div class="toolbar">
+        <div class="color-tools"  >
+          <img src="colorbox.png" alt="" width="80px" class="color-toggle" />
+          <img src="eraser.png" alt="" width="50px" id="eraserButton" style="cursor: pointer;">
+          <img src="clearAll.png" alt="" width="90px" class="clear" onclick="clearCanvas()" style="cursor: pointer;">
+          <img id="magicWipe" src="clearAll.png" width="100" style="position: absolute; top: 50%; transform: translateY(-50%); display: none; z-index: 10; pointer-events: none;">
+          <input type="range" id="sizeSlider" min="0.001" max="20" value="1" step="0.1" style="width: 100px;" />
+          <img src="magicButon.png" id="magicButton" alt="Magic" width="100px"  style="cursor: pointer;"   class="zoom-effect">
+          <img src="diary1.png" alt="Toggle Theme" id="themeToggle" width="70px" style="cursor: pointer;" />
+          <img src="pencil1.png" alt="Toggle pencil" id="pencilToggle" width="50px" style="cursor: pointer;" />
+          <img src="musicMood.png" alt="Toggle music" id="musicToggle" width="70px" style="cursor: pointer;" />
+          <div id="moodOptions" style="display: none;">
+<input id="volumeSlider" type="range" min="0" max="1" step="0.01" value="1" style="display: block; margin-top: 10px; width: 100px;" />
+            <img src="none.png" alt="" class="mood" data-mood="none" width="50px" />
+            <img src="happy.png" alt="Happy" class="mood" data-mood="happy" width="50px" />
+            <img src="sad.png" alt="Sad" class="mood" data-mood="sad" width="50px" />
+            <img src="angry.png" alt="Angry" class="mood" data-mood="angry" width="50px" />
+            <img src="love.png" alt="Love" class="mood" data-mood="love" width="50px" />
+            <img src="relaxed.png" alt="Relaxed" class="mood" data-mood="relaxed" width="50px" />
+            <img src="dreamy.png" alt="Dreamy" class="mood" data-mood="dreamy"width="50px" />
+            <img src="energetic.png" alt="Energetic" class="mood" data-mood="energetic"width="50px" />
+            <img src="magical.png" alt="Magical" class="mood" data-mood="magical"width="50px" />
+            <img src="mysterious.png" alt="Mysterious" class="mood" data-mood="mysterious"width="50px" />
+          </div>
+          
+          <img id="touchPencil" src="pencil1.png" alt="Pencil" />
+
+          <input type="color" id="colorPicker" style="display: none" />
+          <div class="color-palette" id="colorPalette"></div>
+        </div>
+
+   <div id="photoStandWrapper" style="position: relative;display: none;">
+  <div class="photoCanvasWrapper">
+    <img id="photoStand" src="photoStand2.png" alt="Photo Stand" class="photo-stand" />
+    <canvas id="drawingCanvas" class="drawing-canvas"></canvas>
+  </div>
+
+  <img class="backArrow" src="back.png" alt="Back" />
+  <img class="SaveBtn" src="saveBtn.png" alt="Save" />
+</div>
+
+
+        
+          
+          
+          
+          
+          
+   
+      <canvas id="canvas"> </canvas>
+     
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
