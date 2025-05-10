@@ -1,10 +1,10 @@
-const keyboardSound = new Audio("musics/keyboardSound.mp3");
-const clickSound = new Audio("musics/click.mp3");
-const drawSound = new Audio("musics/draw.mp3");
+const keyboardSound = new Audio("keyboardSound.mp3");
+const clickSound = new Audio("click.mp3");
+const drawSound = new Audio("draw.mp3");
 const audio = new Audio();
 
 drawSound.loop = true;
-const eraseSound = new Audio("musics/eraser.mp3");
+const eraseSound = new Audio("eraser.mp3");
 eraseSound.loop = true;
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -20,13 +20,13 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-const Enter = new Audio("musics/enter.mp3");
-const touchSound = new Audio("musics/touch.mp3");
+const Enter = new Audio("enter.mp3");
+const touchSound = new Audio("touch.mp3");
 document.addEventListener("DOMContentLoaded", () => {
   const pencilToggle = document.getElementById("pencilToggle");
   const themeToggle = document.getElementById("themeToggle");
   const moodButtons = document.querySelectorAll(".mood");
-  const touchSound = new Audio("musics/touch.mp3");
+  const touchSound = new Audio("touch.mp3");
 
   const playTouchSound = () => {
     touchSound.currentTime = 0;
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 document.addEventListener("DOMContentLoaded", () => {
   const sizeSlider = document.getElementById("sizeSlider");
-  const wipeSound = new Audio("musics/wipe.mp3");
+  const wipeSound = new Audio("wipe.mp3");
 
   if (sizeSlider) {
     sizeSlider.addEventListener("input", () => {
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 document.addEventListener("DOMContentLoaded", () => {
   const magicButton = document.getElementById("magicButton");
-  const magicSound = new Audio("musics/magic.mp3");
+  const magicSound = new Audio("magic.mp3");
   if (magicButton) {
     magicButton.addEventListener("click", () => {
       magicSound.currentTime = 0;
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 document.addEventListener("DOMContentLoaded", () => {
   const clearButton = document.querySelector(".clear");
-  const clearSound = new Audio("musics/clearAll.mp3");
+  const clearSound = new Audio("clearAll.mp3");
 
   if (clearButton) {
     clearButton.addEventListener("click", () => {
@@ -144,7 +144,7 @@ document.querySelectorAll(".mood").forEach((img) => {
   });
 });
 function playMoodMusic(mood) {
-  audio.src = `musics/${mood}.mp3`;
+  audio.src = `${mood}.mp3`;
   audio.loop = true;
   audio.play();
 }
